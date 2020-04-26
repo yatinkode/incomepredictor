@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>ML Income Prediction</title>
+
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.css') }}">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Income Prediction using Machine Learning</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/" method="POST">
+					
+					 <div class="form-row m-b-55">
+
+                            <div class="value">
+                                <div class="row row-refine">
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" id="age" name="age">
+                                            <label class="label--desc">Age</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="value"  style="width:100%">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="gender" id="gender">
+                                            <option disabled="disabled" selected="selected">Choose Gender</option>
+                                            <option value="0">Female</option>
+											<option value="1">Male</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                     </div>
+					
+
+					
+                        <div class="form-row m-b-55">
+                            
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        
+		
+                            <div class="value" style="width:100%">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select id="occup" name="occup">
+                                            <option disabled="disabled" selected="selected">Choose Occupation</option>
+                                           <option value="0">Adminstration Clerical</option>
+										   <option value="1">Armed Forces</option>
+										   <option value="2">Craft Repair</option>
+										   <option value="3">Executive Managerial</option>
+										   <option value="4">Farming and Fishing</option>
+										   <option value="5">Handlers and Cleaners</option>
+										   <option value="6">Machine Operational Inspector</option>
+										   <option value="7">Other Service</option>
+										   <option value="8">Privi House Service</option>
+										   <option value="9">Prof specialty</option>
+										   <option value="10">Protective service</option>
+										   <option value="11">Sales</option>
+										   <option value="12">Tech Support</option>
+										   <option value="13">Transport Moving</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+										
+                                    </div>
+                                    <div class="col-2">
+                                       
+                            <div class="value"  style="width:100%">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select id="relation" name="relation">
+                                            <option disabled="disabled" selected="selected">Choose Relationship</option>
+                                            <option value="0">Husband</option>
+											<option value="1">Not in family</option>
+											<option value="2">Other Relative</option>
+											<option value="3">Own Child</option>
+											<option value="4">Unmarried</option>
+											<option value="5">Wife</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+						
+						
+						
+						<div class="form-row m-b-55">
+                            
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        
+		
+                            <div class="value" style="width:100%">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select id="race" name="race">
+                                            <option disabled="disabled" selected="selected">Choose Race</option>
+                                            <option value="0">Amer Indian Eskimo</option>
+											<option value="1">Asian Pac Islander</option>
+											<option value="2">Black</option>
+											<option value="3">Other</option>
+											<option value="4">White</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+										
+                                    </div>
+                                    <div class="col-2">
+                                       
+                            <div class="value"  style="width:100%">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select id="edu" name="edu">
+                                            <option disabled="disabled" selected="selected">Choose Education</option>
+                                            <option value="0">10th</option>
+											<option value="1">11th</option>
+											<option value="2">12th</option>
+											<option value="3">1st-4th</option>
+											<option value="4">5th-6th</option>
+											<option value="5">7th-8th</option>
+											<option value="6">9th</option>
+											<option value="7">Assoc-acdm</option>
+											<option value="8">Assoc-voc</option>
+											<option value="9">Bachelors</option>
+											<option value="10">Doctorate</option>
+											<option value="11">High School grad</option>
+											<option value="12">Masters</option>
+											<option value="13">Preschool</option>
+											<option value="14">Prof-school</option>
+											<option value="15">Other college</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+						
+						
+						
+						
+						  <div class="form-row">
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select id="w_class" name="w_class">
+                                            <option disabled="disabled" selected="selected">Choose Working Class</option>
+                                            <option value="0">Federal Government</option>
+											<option value="1">Local Government</option>
+											<option value="2">Never worked</option>
+											<option value="3">Private Employer</option>
+											<option value="4">Self Employed Inc</option>
+											<option value="5">Self Employed Not Inc</option>
+											<option value="6">State Government</option>
+											<option value="7">Without Pay</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						
+						<div class="form-row">
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select id="martial_stat" name="martial_stat">
+                                            <option disabled="disabled" selected="selected">Choose Marital Status</option>
+                                            <option value="0">Divorced</option>
+											<option value="1">Married</option>
+											<option value="2">Single</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						
+						  
+						  
+						  <div class="form-row m-b-55">
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" id="c_gain" name="c_gain">
+                                            <label class="label--desc">Capital Gain</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" id="c_loss" name="c_loss">
+                                            <label class="label--desc">Capital Loss</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						  
+						  
+						 <div class="form-row m-b-55">
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" id="hours_per_week" name="hours_per_week">
+                                            <label class="label--desc">Hours Per Week</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="value"  style="width:100%">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select  id="native-country" name="native-country">
+                                            <option disabled="disabled" selected="selected">Choose Native Country</option>
+                                            <option value="0">Cambodia</option>
+											<option value="1">Canada</option>
+											<option value="2">China</option>
+											<option value="3">Columbia</option>
+											<option value="4">Cuba</option>
+											<option value="5">Dominican Republic</option>
+											<option value="6">Ecuador</option>
+											<option value="7">El Salvadorr</option>
+											<option value="8">England</option>
+											<option value="9">France</option>
+											<option value="10">Germany</option>
+											<option value="11">Greece</option>
+											<option value="12">Guatemala</option>
+											<option value="13">Haiti</option>
+											<option value="14">Netherlands</option>
+											<option value="15">Honduras</option>
+											<option value="16">HongKong</option>
+											<option value="17">Hungary</option>
+											<option value="18">India</option>
+											<option value="19">Iran</option>
+											<option value="20">Ireland</option>
+											<option value="21">Italy</option>
+											<option value="22">Jamaica</option>
+											<option value="23">Japan</option>
+											<option value="24">Laos</option>
+											<option value="25">Mexico</option>
+											<option value="26">Nicaragua</option>
+											<option value="27">Outlying-US(Guam-USVI-etc)</option>
+											<option value="28">Peru</option>
+											<option value="29">Philippines</option>
+											<option value="30">Poland</option>
+											<option value="11">Portugal</option>
+											<option value="32">Puerto-Rico</option>
+											<option value="33">Scotland</option>
+											<option value="34">South</option>
+											<option value="35">Taiwan</option>
+											<option value="36">Thailand</option>
+											<option value="37">Trinadad&Tobago</option>
+											<option value="38">United States</option>
+											<option value="39">Vietnam</option>
+											<option value="40">Yugoslavia</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+
+                    
+                            <button class="btn btn--radius-2 btn--red" type="submit" value="Submit">Get Income</button>
+                        </div>
+                    </form>
+					
+				<div class="card-footer">
+                    <h2 class="title">{{ prediction }}</h2>
+                </div>
+	
+					
+					<!-- <h1><center> {{ prediction }}</center></h1> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+	 <script type="text/javascript" src="{{ url_for('static', filename='js/global.js') }}"></script>
+
+</body>
+
+</html>
+<!-- end document-->
